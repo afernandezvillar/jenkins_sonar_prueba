@@ -1,4 +1,4 @@
-from  sklearn.linear_model import LinearRegression
+from sklearn.svm import SVR
 
 
 class TabularRegressor:
@@ -6,7 +6,7 @@ class TabularRegressor:
         self.model = None
 
     def train(self, x_train, y_train):
-        self.model = LinearRegression()
+        self.model = SVR()  # Instancia del regresor SVR
         self.model.fit(x_train, y_train)
 
     def predict(self, x_test):
